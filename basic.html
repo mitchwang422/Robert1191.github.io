@@ -5,13 +5,18 @@
 <!-- below is for content -->
 <a-assets>
 <!-- id=“file name“ src=“file url" -->
-<a-asset-item id="makery" src="https://cdn.rawgit.com/MakeryINFO/models-for-AR.js/master/makery.gltf"></a-asset-item>
+<!-- <a-asset-item id="makery" src="https://cdn.rawgit.com/MakeryINFO/models-for-AR.js/master/makery.gltf"></a-asset-item> -->
+<a-asset-item id="objFile" src="https://github.com/Robert1191/Robert1191.github.io/blob/master/Models/Heart/Heart.obj"></a-asset-item>
+<a-asset-item id="mtlFile" src="https://github.com/Robert1191/Robert1191.github.io/blob/master/Models/Heart/Heart.mtl"></a-asset-item>
 </a-assets>
 <!-- scale values allow you to adjust the file’s display size, gltf-model=“#your file name“ -->
 
 
 <a-marker-camera preset='hiro'>
-	<a-entity scale="20 20 20" gltf-model="#makery"></a-entity>
+	<!-- <a-entity scale="20 20 20" gltf-model="#makery"></a-entity> -->
+	<a-entity 
+            <a-entity obj-model="obj: #objFile; mtl: #mtlFile"></a-entity>
+    </a-entity>
 </a-marker-camera>
 </a-scene>
 </body>
